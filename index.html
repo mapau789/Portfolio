@@ -3895,8 +3895,10 @@ body{margin:0;background:var(--pg);color:var(--t1);
 font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif}
 nav{position:sticky;top:0;z-index:50;background:var(--bk);
 border-bottom:1px solid #262624;padding:10px 28px;display:flex;gap:18px;
-align-items:baseline;flex-wrap:wrap}
+align-items:center;flex-wrap:wrap}
 nav b{font-size:15px;color:#fff}
+.by{flex:1 0 100%;text-align:right;font-size:11.5px;color:#a9a8a2;
+font-weight:600;letter-spacing:.06em;margin-top:3px}
 nav a{color:#b9b8b3;text-decoration:none;font-size:12.5px}
 nav a:hover{color:#fff}
 main{max-width:1200px;margin:0 auto;padding:24px 20px 80px}
@@ -3911,6 +3913,7 @@ padding:2px 16px 14px;margin:0 0 18px;border-radius:0 0 10px 10px}
 padding:0;margin-top:16px;overflow:hidden}
 .card h3{font-size:15.5px;font-weight:600;margin:0;padding:12px 18px 2px;
 background:var(--bk);color:#fff}
+.card h3 .n{color:var(--ac);font-weight:700}
 .card .sub{font-size:12.5px;color:#c9c8c3;margin:0;padding:2px 18px 12px;
 background:var(--bk)}
 .card>div,.card>details,.card>select{margin:12px 18px 16px}
@@ -3930,17 +3933,17 @@ border-radius:10px;padding:10px 14px}
 .kpi .n{font-size:11px;color:var(--mu)}
 table.t{border-collapse:collapse;width:100%;font-size:12px;
 font-variant-numeric:tabular-nums}
-table.t th{background:#8ea9ce;color:#fff;font-weight:700;font-size:11px;
+table.t th{background:var(--ac-hd);color:#fff;font-weight:700;font-size:11px;
 text-align:left;padding:7px 10px;border-bottom:2px solid var(--s)}
 table.t td{border-bottom:1px solid #ebebe6;padding:5px 10px;color:var(--t2)}
-table.t td:first-child{background:#dce6f2;color:var(--t1);font-weight:600;
+table.t td:first-child{background:var(--ac-bg);color:var(--t1);font-weight:600;
 border-bottom:2px solid var(--s)}
-.hl{background:rgba(42,120,214,.08)}
-.chip.hi{border-color:var(--c1);background:rgba(42,120,214,.08);padding:9px 16px}
-.chip.hi b{color:var(--c1);font-size:17px}
+.hl{background:var(--ac-bg)}
+.chip.hi{border-color:var(--ac-bd);background:var(--ac-bg);padding:9px 16px}
+.chip.hi b{color:var(--ac-dk);font-size:17px}
 .chip.nota{border-style:dashed;color:var(--mu);align-self:center}
-.chip.hi2{border-color:#1c5cab;background:rgba(28,92,171,.14);padding:9px 16px}
-.chip.hi2 b{color:#1c5cab;font-size:17px}
+.chip.hi2{border-color:var(--ac-dk);background:var(--ac-bg);padding:9px 16px}
+.chip.hi2 b{color:var(--ac-dk);font-size:17px}
 .hscroll{overflow-x:auto}
 .disc{background:#faf3dc;border:1px solid #e8c96a;
 border-radius:10px;padding:11px 16px;font-size:12px;color:#52514e;
@@ -3958,15 +3961,15 @@ display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:16px}
 .selbar span{color:#a9a8a2;font-size:12.5px;font-weight:600;
 letter-spacing:.06em;text-transform:uppercase}
 .selbar select{min-width:300px}
-.best{color:var(--c1);font-weight:700}
+.best{color:var(--ac-dk);font-weight:700}
 .ph{border:1.5px dashed var(--wa);border-radius:10px;padding:26px;
 text-align:center;color:var(--t2);font-size:13px;background:var(--s)}
 .ph b{color:var(--t1)}
 .btns{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 4px}
 .btns button{background:var(--s);border:1px solid var(--gr);border-radius:8px;
 padding:7px 14px;font:600 12.5px system-ui;color:var(--t2);cursor:pointer}
-.btns button.on{border-color:var(--c1);color:var(--c1);
-background:rgba(42,120,214,.07)}
+.btns button.on{border-color:var(--ac);color:var(--ac-dk);
+background:var(--ac-bg)}
 .anim{display:flex;gap:12px;align-items:center;margin:10px 0 4px}
 .anim input[type=range]{flex:1}
 .anim button{width:38px;height:30px;border:1px solid var(--gr);
@@ -3981,10 +3984,39 @@ details summary{font-size:11.5px;color:var(--mu);cursor:pointer}
 .warn{background:rgba(250,178,25,.12);border:1px solid var(--wa);
 border-radius:10px;padding:10px 14px;font-size:12.5px;margin-top:16px}
 .tw{overflow-x:auto}
-.qa{font-size:13px;line-height:1.6;color:var(--t2)}
+.qacard{background:var(--ac-bg);border:1px solid var(--ac-bd);
+border-radius:10px;padding:18px 22px;margin-top:16px}
+.qacard h4{margin:0 0 8px;font-size:17px;font-weight:700;color:var(--ac-dk)}
+.qacard p{margin:0;font-size:13px;line-height:1.65;color:var(--t2)}
+.qacard .ans{color:var(--ac-dk);font-weight:700}
+/* ---- acentos por parte (paleta del sistema, orden documentado) ----
+   Solo viven en el chrome: banda de seccion, insignias y navegacion. Los
+   colores de DATO dentro de los graficos no se tocan. */
+#p0{--ac:#9085e9;--ac-dk:#60599c;--ac-hd:#756cbd;--ac-bg:#efeefc;--ac-bd:#d5d1f7}
+#p1{--ac:#d95926;--ac-dk:#a3431c;--ac-hd:#c55123;--ac-bg:#fae8e1;--ac-bd:#f1c0ad}
+#p2{--ac:#1090a0;--ac-dk:#0c6b76;--ac-hd:#0e8290;--ac-bg:#deeff2;--ac-bd:#a4d5db}
+#p3{--ac:#c98500;--ac-dk:#855800;--ac-hd:#a16a00;--ac-bg:#f7eedb;--ac-bd:#ead19e}
+#p4{--ac:#d55181;--ac-dk:#a23e62;--ac-hd:#c44b77;--ac-bg:#f9e7ed;--ac-bd:#efbdcf}
+#p5{--ac:#008300;--ac-dk:#007200;--ac-hd:#008300;--ac-bg:#dbeedb;--ac-bd:#9ed09e}
+/* fuera de las secciones manda el morado de la Parte 0 */
+body{--ac:#9085e9;--ac-dk:#60599c;--ac-hd:#756cbd;--ac-bg:#efeefc;--ac-bd:#d5d1f7}
+section>h2{border-left:7px solid var(--ac)}
+h2 small{color:var(--ac,#a9a8a2)}
+.lead{border-left:7px solid var(--ac)}
+.secsum{border-left:7px solid var(--ac)}
+.card h3{border-left:5px solid var(--ac)}
+.card .sub{border-left:5px solid var(--ac)}
+/* barra de progreso de lectura */
+#prog{position:fixed;top:0;left:0;height:3px;width:0;z-index:60;
+background:#9085e9;transition:width .1s linear}
+/* navegacion: la parte activa se marca con su propio acento */
+nav a{padding:3px 7px;border-radius:6px;transition:color .15s}
+nav a.on{color:#fff;font-weight:600;background:rgba(255,255,255,.12);
+box-shadow:inset 0 -2px 0 0 var(--nc,#9085e9)}
 /* portada */
-.hero{background:var(--bk);color:#fff;border-radius:12px;padding:26px 28px 22px;
-margin-top:8px}
+.hero{background:var(--bk);color:#fff;border-radius:12px;
+padding:30px 28px 26px;margin-top:18px;
+border-left:7px solid #3987e5;border-right:7px solid #3987e5}
 .hero h1{font-size:27px;font-weight:700;margin:0;line-height:1.25;
 text-align:center}
 .brief{background:var(--s);color:var(--t1);border-radius:12px;
@@ -3993,20 +4025,32 @@ padding:20px 24px;margin-top:12px;font-size:13.5px;line-height:1.6}
 .brief ol{margin:0;padding-left:20px}
 .brief li{margin:5px 0;color:var(--t2)}
 .brief li b{color:var(--t1)}
+/* El azul es la voz del documento: metodologia y el "para que" de cada
+   parte. El color de la parte va como resaltador en su titulo, muy claro
+   (mezcla al 84% con blanco) para no competir con el texto. */
+.brief .why{display:block;margin-top:4px;font-size:12.5px;font-weight:600;
+color:#2261ad}
+.brief li b{padding:1px 7px;border-radius:4px;box-decoration-break:clone;
+-webkit-box-decoration-break:clone}
+.brief .l1 b{background:#f9e4dc} .brief .l2 b{background:#d9edf0}
+.brief .l3 b{background:#f6ebd6} .brief .l4 b{background:#f8e3eb}
+.brief .l5 b{background:#d6ebd6}
+.brief .metodo{color:#2261ad;font-weight:600;
+border-left:3px solid #2a78d6;padding-left:12px}
 /* resumen de seccion y de grafica */
 .secsum{background:var(--s);color:var(--t1);border-radius:0 0 10px 10px;
 padding:13px 16px;margin:-18px 0 18px;font-size:13px;line-height:1.55}
-.secsum .kt{display:block;margin-top:7px;font-weight:600;color:#1c5cab}
+.secsum .kt{display:block;margin-top:7px;font-weight:600;color:var(--ac-dk)}
 .gsum{font-size:12.5px;line-height:1.55;color:var(--t2);
 border-top:1px solid var(--gr);padding-top:10px}
 .gsum b{color:var(--t1)}
 table.hdtab{margin-bottom:10px}
-.nnname{background:#5b7fb0;color:#fff;font-weight:700;font-size:12.5px;
+.nnname{background:var(--ac-hd);color:#fff;font-weight:700;font-size:12.5px;
 padding:6px 10px;border-radius:6px 6px 0 0;margin-top:12px}
 .nnname:first-child{margin-top:0}
-table.t td.pname,table.t td.pname:first-child{background:#dce6f2}
-table.t td.best{color:#1c5cab;font-weight:700}
-table.t td.bestcell{background:#b9d2f2;color:#0b3f7d;font-weight:700}
+table.t td.pname,table.t td.pname:first-child{background:var(--ac-bg)}
+table.t td.best{color:var(--ac-dk);font-weight:700}
+table.t td.bestcell{background:var(--ac-bd);color:var(--ac-dk);font-weight:700}
 .pctbox{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:2px}
 .pctrow{display:flex;gap:6px;justify-content:center;align-items:flex-end}
 .pcell{text-align:center}
@@ -4014,7 +4058,7 @@ table.t td.bestcell{background:#b9d2f2;color:#0b3f7d;font-weight:700}
 .pcell .pv{border:2px solid var(--gr);border-radius:6px;padding:5px 10px;
 font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;
 min-width:64px;background:var(--s)}
-.pcell.gen .pv{background:#dce6f2;border-color:#dce6f2;color:var(--t1)}
+.pcell.gen .pv{background:var(--ac-bg);border-color:var(--ac-bd);color:var(--t1)}
 .legend{font-size:11.5px;color:var(--t2);margin:6px 0 2px}
 .legend i{display:inline-block;width:16px;height:3px;vertical-align:middle;
 margin:0 5px 2px 12px}
@@ -4022,16 +4066,20 @@ margin:0 5px 2px 12px}
 </style>
 </head>
 <body>
-<nav><b>Hourly Demand Forecast · 30 days ahead for Courier planning</b>
+<div id="prog"></div>
+<nav><b>Building the Forecast, Step by Step</b>
 <a href="#p0">0 · Forecast</a><a href="#p1">1 · Data exploration</a>
 <a href="#p2">2 · Model Casting</a><a href="#p3">3 · GA vs Grid</a>
 <a href="#p4">4 · Optimization</a><a href="#p5">5 · Experiments</a>
+<span class="by">BY: MARIA PAULA MEJIA TOVAR</span>
 </nav>
 <main>
-<div class="hero"><h1>Delivery Order Forecast To Drive Courier
-Headcount Requirements</h1></div>
+<div class="hero"><h1>Hourly Delivery Demand Forecast</h1></div>
 
 <div class="brief">
+<p class="metodo">Beyond the results, this document walks through the
+methodology itself: how a forecasting model is calibrated, step by step, to
+one specific operational need.</p>
 <p>Fast-delivery operations need accurate courier headcount forecasts well
 before orders arrive to control operating costs and maintain service levels.
 Workforce planning must be done early enough to align hiring and staffing with
@@ -4040,11 +4088,16 @@ the short delivery windows.</p>
 converts the forecast into the number of couriers needed each hour. To find the
 best forecasting approach, the work was divided into five key parts:</p>
 <ol>
-<li><b>Data exploration.</b> Build a clean hourly series and confirm the demand pattern behind it.</li>
-<li><b>Model casting.</b> Benchmark six model families under identical conditions to shortlist the best candidates.</li>
-<li><b>GA vs Grid Search.</b> Test whether an evolutionary search beats an undirected exhaustive sweep at finding the optimum.</li>
-<li><b>Optimization.</b> Tune three neural network architectures with the winning search method.</li>
-<li><b>Experiments.</b> Compare different setups to achieve the final accuracy gain.</li>
+<li class="l1"><b>Data exploration.</b> Build a clean hourly series and confirm the demand pattern behind it.
+<span class="why">To understand the raw data, check that it is sound, and identify the pattern underneath it.</span></li>
+<li class="l2"><b>Model casting.</b> Benchmark six model families under identical conditions to shortlist the best candidates.
+<span class="why">To see how different models behave, and spend the tuning effort on the strongest ones.</span></li>
+<li class="l3"><b>GA vs Grid Search.</b> Test whether an evolutionary search beats an undirected exhaustive sweep at finding the optimum.
+<span class="why">To find out which search method calibrates the models more effectively.</span></li>
+<li class="l4"><b>Optimization.</b> Tune three neural network architectures with the winning search method.
+<span class="why">To search for the best possible forecast for this problem.</span></li>
+<li class="l5"><b>Experiments.</b> Compare different setups to achieve the final accuracy gain.
+<span class="why">To try different optimization setups and see how each one performs.</span></li>
 </ol>
 </div>
 
@@ -4154,16 +4207,17 @@ fit to the actual data behavior.</p>
 line representing the benchmark used to assess each model&rsquo;s performance.</p>
 <div id="c2_1" style="height:400px"></div><div class="gsum">The neural families deliver competitive error against the benchmark under baseline settings, before any tuning. Statistical models track the level but respond less to demand dynamics. <b>As a conclusion, neural networks offer the highest upside and justify the optimization investment.</b></div></div>
 
-<div class="card"><h3>How can the forecast be improved?</h3>
-<p class="sub">The next lever is hyperparameter optimization</p>
-<div class="qa">Every neural network has settings that are chosen before
-training begins rather than learned from the data: how many passes it makes
-over the history, how many neurons it uses, and how large a correction it
-applies after each mistake. These settings decide how much temporal structure
-the network can absorb and how quickly it settles, so two models built from
-identical data can forecast very differently depending on them. Parts 3 and 4
-search that space systematically to find the combination that produces the
-lowest forecast error.</div></div>
+<div class="qacard">
+<h4>How can the forecast be improved?</h4>
+<p><b class="ans">The answer is hyperparameter optimization.</b> Every neural
+network has settings that are chosen before training begins rather than learned
+from the data: how many passes it makes over the history, how many neurons it
+uses, and how large a correction it applies after each mistake. These settings
+decide how much temporal structure the network can absorb and how quickly it
+settles, so two models built from identical data can forecast very differently
+depending on them. <b class="ans">Parts 3 and 4 search that space
+systematically to find the combination that produces the lowest forecast
+error.</b></p></div>
 </section>
 
 <section id="p3">
@@ -4300,6 +4354,10 @@ const RG=[[0,'#a9d8a0'],[0.5,'#f2dc96'],[1,'#e59896']];
 const FONT='system-ui,-apple-system,"Segoe UI",sans-serif';
 const CFG={displayModeBar:false,responsive:true};
 const REDES=['DNN','RNN','LSTM'];
+/* El acento de la parte entra en el plot SOLO donde la marca destacada ya
+   tenia un color propio y no choca con la convencion azul=Actual /
+   rojo=Forecast, que sigue intacta en todas las series de pronostico. */
+const ACP={p1:'#d95926',p2:'#1090a0',p3:'#c98500',p4:'#d55181',p5:'#008300'};
 const EXPS=D.p5.exp_claves;
 const fmt=v=>v==null?'—':Number(v).toLocaleString('en-US');
 
@@ -4320,6 +4378,36 @@ function tabla(cab,filas,marca){
   const cls=marca&&marca(i,j,c)?' class="'+marca(i,j,c)+'"':'';
   return '<td'+cls+'>'+(c==null?'—':c)+'</td>';}).join('')+'</tr>';});
  return h+'</table>';}
+
+/* ===================== orientacion: progreso y navegacion ============ */
+(function(){
+ const ACENTOS={p0:'#9085e9',p1:'#d95926',p2:'#1090a0',
+                p3:'#c98500',p4:'#d55181',p5:'#008300'};
+ const barra=document.getElementById('prog');
+ const enlaces=[...document.querySelectorAll('nav a')];
+ const secciones=enlaces.map(a=>document.querySelector(a.getAttribute('href')));
+
+ // el numero de cada tarjeta se tine con el acento de su parte
+ document.querySelectorAll('.card h3').forEach(h=>{
+  h.innerHTML=h.innerHTML.replace(/^(\u2605\d+)/,'<span class="n">$1</span>');});
+
+ function alDesplazar(){
+  const alto=document.documentElement.scrollHeight-window.innerHeight;
+  barra.style.width=(alto>0?window.scrollY/alto*100:0)+'%';
+  // la seccion activa es la ultima cuya cabecera ya paso el tercio superior
+  let activa=0;
+  secciones.forEach((s,i)=>{
+   if(s&&s.getBoundingClientRect().top<=window.innerHeight*0.34)activa=i;});
+  const clave=secciones[activa]?secciones[activa].id:'p0';
+  barra.style.background=ACENTOS[clave]||'#9085e9';
+  enlaces.forEach((a,i)=>{
+   a.classList.toggle('on',i===activa);
+   if(i===activa)a.style.setProperty('--nc',ACENTOS[clave]||'#9085e9');});
+ }
+ window.addEventListener('scroll',alDesplazar,{passive:true});
+ window.addEventListener('resize',alDesplazar);
+ alDesplazar();
+})();
 
 /* ============================== PART 0 ============================== */
 function layLight(o){
@@ -4450,7 +4538,7 @@ function layLight(o){
 
  const p=D.p1.prep;
  Plotly.newPlot('c1_4',[{x:p.delta,y:p.config,mode:'markers',
-  marker:{size:10,color:C1},
+  marker:{size:10,color:ACP.p1},
   error_x:{type:'data',array:p.std,color:MU,thickness:1.5,width:6},
   hovertemplate:'%{y}<br>ΔRMSE %{x:.1f} ± %{customdata:.1f} orders/h<extra></extra>',
   customdata:p.std,showlegend:false}],
@@ -4466,7 +4554,7 @@ function layLight(o){
  const orden=r.modelos.map((m,i)=>i).sort((a,b)=>r.rmse[b]-r.rmse[a]);
  Plotly.newPlot('c2_1',[{type:'bar',orientation:'h',
   y:orden.map(i=>r.modelos[i]),x:orden.map(i=>r.rmse[i]),
-  marker:{color:orden.map(i=>r.supera[i]==='si'?C1:MU),
+  marker:{color:orden.map(i=>r.supera[i]==='si'?ACP.p2:MU),
    opacity:orden.map(i=>r.supera[i]==='si'?1:0.45)},
   text:orden.map(i=>fmt(r.rmse[i])),textposition:'outside',
   textfont:{color:INK2,size:11},cliponaxis:false,
@@ -4581,7 +4669,7 @@ function layLight(o){
  REDES.forEach((red,i)=>{
   const e=evs[red];if(!e)return;
   tr3.push({x:e.fitness.map((_,k)=>k+1),y:e.fitness,mode:'markers',
-   marker:{size:5,color:C1,opacity:0.75},xaxis:'x'+(i+1),yaxis:'y'+(i+1),
+   marker:{size:5,color:ACP.p5,opacity:0.75},xaxis:'x'+(i+1),yaxis:'y'+(i+1),
    showlegend:false,
    hovertemplate:'model #%{x}<br>fitness %{y}<extra>'+red+'</extra>'});
   an3.push({xref:'x'+(i+1)+' domain',yref:'paper',x:0.5,y:1.12,
@@ -4603,7 +4691,7 @@ function layLight(o){
  const tr4=[];
  paneles.forEach((p,pi)=>{
   const xa='x'+(pi+1),ya='y'+(pi+1);
-  [['Genetic Algorithm',gaI,C1],['Grid Search',grI,C2]].forEach(g=>{
+  [['Genetic Algorithm',gaI,ACP.p3],['Grid Search',grI,C1]].forEach(g=>{
    const vals=g[1].map(i=>s[p[1]][i]),m=med(vals);
    tr4.push({type:'bar',x:[g[0].split(' ')[0]],y:[m],marker:{color:g[2]},
     xaxis:xa,yaxis:ya,showlegend:pi===0,name:g[0],legendgroup:g[0],
@@ -4699,9 +4787,9 @@ function setExp(e){
 
  // el ganador se resalta sea cual sea la arquitectura, no siempre la RNN
  Plotly.react('c4_3',[{type:'bar',x:REDES,y:REDES.map(r=>E.rmse_suelto[r]),
-  marker:{color:REDES.map(r=>r===champ?C1:MU),
+  marker:{color:REDES.map(r=>r===champ?ACP.p4:MU),
    opacity:REDES.map(r=>r===champ?1:0.5),
-   line:{width:REDES.map(r=>r===champ?2:0),color:'#0b3f7d'}},
+   line:{width:REDES.map(r=>r===champ?2:0),color:'#a23e62'}},
   text:REDES.map(r=>r===champ?'<b>'+fmt(E.rmse_suelto[r])+'</b>':
    fmt(E.rmse_suelto[r])),textposition:'outside',
   textfont:{size:12,color:INK2},cliponaxis:false,showlegend:false,
@@ -4763,7 +4851,7 @@ function setFrame(k){
   .replace('<table class="t"','<table class="t hdtab"');
 
  const ef=D.p5.esfuerzo,tr5=[];
- tr5.push({type:'bar',x:ef.exp,y:ef.horas,marker:{color:C2},xaxis:'x1',
+ tr5.push({type:'bar',x:ef.exp,y:ef.horas,marker:{color:ACP.p5},xaxis:'x1',
   yaxis:'y1',showlegend:false,text:ef.horas.map(v=>v.toFixed(2)+' h'),
   textposition:'outside',textfont:{size:11,color:INK2},cliponaxis:false,
   hovertemplate:'%{x}: %{y} h wall clock<extra></extra>'});
@@ -4787,10 +4875,10 @@ function setFrame(k){
    textfont:{size:10,color:MU},
    hovertemplate:'%{text}<br>%{x} h cumulative · single %{y:,.1f}<extra></extra>'},
   {x:F.horas_acum,y:F.rmse_entregado,name:'Delivered forecast',
-   mode:'lines+markers+text',line:{color:C1,width:2.5},
-   marker:{size:11,color:C1},
+   mode:'lines+markers+text',line:{color:ACP.p5,width:2.5},
+   marker:{size:11,color:ACP.p5},
    text:F.mejora_entregado_pct.map(v=>(v>0?'+':'')+v+'%'),
-   textposition:'bottom center',textfont:{size:11,color:C1},
+   textposition:'bottom center',textfont:{size:11,color:ACP.p5},
    hovertemplate:'%{x} h cumulative · delivered %{y:,.1f} '+
     '(%{text} vs EXP 1)<extra></extra>'}],
   lay({xaxis:{title:{text:'cumulative compute (hours)',font:{size:11,color:MU}}},
